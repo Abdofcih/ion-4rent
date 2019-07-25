@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      My Apartments
+      
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="add-aparment">Add</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <app-apartment-list [apartments]="apartments"></app-apartment-list>
+</ion-content>

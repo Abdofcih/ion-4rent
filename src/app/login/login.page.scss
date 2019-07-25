@@ -1,0 +1,29 @@
+.bg-img{
+    background:url(../../assets/img/login.jpg) no-repeat center ;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 20vh;
+ 
+}
+.inputItem{
+    --ion-background-color: rgba(255, 255, 255,0.0);
+    margin-top: 15px;
+    border-bottom: 1px solid #fff;
+}
+ion-input{
+    color: #ffffff;
+}
+.errorInput{
+    color: red;
+    text-align: left;
+    margin-top: 4px
+}
+.item-has-focus{
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+.list-md{
+    background-color: transparent;
+}
+ion-button{
+    margin-top: 15px;
+}

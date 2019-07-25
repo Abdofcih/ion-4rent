@@ -1,0 +1,45 @@
+<ion-card>
+    <ion-card-header class="ion-no-padding">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="11">
+              <ion-card-subtitle>Phone: {{Publisher?.phone || '0123456789'}}</ion-card-subtitle>
+              <ion-card-title>{{apartment.title}} </ion-card-title>
+          </ion-col>
+          <ion-col size="1">
+              <i class="fa fa-heart fa-favourit" 
+                  [class.fa-favourit-active]="isFavourite" 
+                  (click)="toggleFavourite()"
+                  *ngIf='!isMine'></i>
+                  <i class="fa fa-ellipsis-v"  *ngIf='isMine'></i>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    
+    <ion-card-content>
+         <ion-item lines="none">
+             <i class="fas fa-map-marker-alt" ></i>
+             <ion-label class="ml-1">{{apartment.place}}</ion-label>
+             <ion-label> {{apartment.price | number}} /month</ion-label>
+         </ion-item>
+       {{apartment.desc}}
+      
+    </ion-card-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col >
+            <ion-badge > Floor: {{apartment.floor}}</ion-badge>
+          </ion-col>
+          <ion-col >
+           <ion-badge color="success">  Room: {{apartment.room}}</ion-badge>
+          </ion-col>
+          <ion-col >
+            <ion-badge > Bathroom: {{apartment.bathroom}}</ion-badge>
+          </ion-col>
+          <ion-col>
+            <ion-badge color="secondary">Furniture: {{apartment.furniture? 'Yes' : 'No'}}</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>

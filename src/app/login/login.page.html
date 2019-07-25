@@ -1,0 +1,76 @@
+
+<div class="bg-img">
+<ion-grid>
+  <ion-row>
+    <ion-col size="10" offset="1" size-md="6" offset-md="3" class="ion-text-center">
+      <span *ngIf="loading"  style="color: white;font-size: 20px">waite.......</span>
+          <!-- Start login content -->
+           <form #fIn='ngForm' (ngSubmit)="loging(fIn.value)" *ngIf="page == 'login'">
+            <ion-list >
+                <ion-item class="inputItem" >
+                  <ion-label position="floating" color="light">Email</ion-label>
+                  <ion-input type="email" ngModel name="email"></ion-input>
+                </ion-item>
+                <ion-item class="inputItem" >
+                    <ion-label position="floating" color="light">Password</ion-label>
+                    <ion-input type="password" ngModel name="password"></ion-input>
+                </ion-item>
+            </ion-list>
+            <ion-button type="submit" expand="full" shape="round"  >
+              Log in
+          </ion-button>
+           </form>
+          <!-- End login content -->
+          <!-- Start Signup content -->
+         <form #fUp='ngForm' (ngSubmit)="signup(fUp.value)" *ngIf="page == 'signup'">
+          <ion-list >
+            <ion-item class="inputItem" >
+               <ion-label position="floating" color="light">Name</ion-label>
+               <ion-input type="text" ngModel name="name" #name='ngModel' required></ion-input>
+             </ion-item>
+             <span *ngIf='name.touched && name.invalid' class='errorInput'>Name is Required</span>
+             <ion-item class="inputItem" >
+                 <ion-label position="floating" color="light">Mobile</ion-label>
+                 <ion-input type="tel" ngModel name="phone" #phone='ngModel' required minlength='11' maxlength='11'></ion-input>
+               </ion-item>
+               <span *ngIf='phone.touched && phone.invalid && phone.errors.required' class='errorInput'>Mobile is Required</span>
+               <span *ngIf='phone.touched && phone.invalid && phone.errors.minlength' class='errorInput'>Mobile length is 11</span>
+               <span *ngIf='phone.touched && phone.invalid && phone.errors.maxlength' class='errorInput'>Mobile length is 11</span>
+             <ion-item class="inputItem" >
+                 <ion-label position="floating" color="light">Email</ion-label>
+                 <ion-input type="email" ngModel name="email" ></ion-input>
+               </ion-item>
+             <ion-item class="inputItem" >
+                 <ion-label position="floating" color="light">Password</ion-label>
+                 <ion-input type="password" ngModel name="password" #password='ngModel' required minlength='6'></ion-input>
+               </ion-item>
+               <span *ngIf='password.touched && password.invalid && password.errors.required' class='errorInput'>password is Required</span>
+               <span *ngIf='password.touched && password.invalid && password.errors.minlength' class='errorInput'>Password length is 6</span>
+               <ion-item class="inputItem">
+                   <ion-label position="floating" color="light">Place</ion-label>
+                   <ion-select ngModel name="place">
+                       <ion-select-option value="Giza">giza</ion-select-option>
+                       <ion-select-option value="Cairo">cairo</ion-select-option>
+                       <ion-select-option value="Maadi">maadi</ion-select-option>
+                   </ion-select>
+               </ion-item>
+         </ion-list>
+         
+         <ion-button type="submit" expand="full" shape="round">
+          Sign Up
+         </ion-button>
+         </form>
+          <!-- End Signup content -->
+
+          <!-- Start Second button to change forms -->
+          <ion-button fill="outline" shape="round" color="warning" *ngIf="page != 'login'" (click)="changeContent('login')">
+              Log in
+          </ion-button>
+          <ion-button fill="outline" shape="round" color="warning" *ngIf="page != 'signup'" (click)="changeContent('signup')" >
+              Sign Up
+          </ion-button>
+          <!-- End second button -->
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</div>

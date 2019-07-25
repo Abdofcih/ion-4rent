@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Apartment</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addApartment()">Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding >
+  <ion-list>
+        <ion-item class="m-1 mb-3">
+          <ion-label position="floating" >Title</ion-label>
+          <ion-input [(ngModel)]="newApartment.title"></ion-input>
+        </ion-item>
+        <ion-item class="m-1 mb-3">
+            <ion-label position="floating">Description</ion-label>
+            <ion-input [(ngModel)]="newApartment.desc"></ion-input>
+        </ion-item>
+        <ion-item class="m-1 mb-3">
+              <ion-label position="floating">Address</ion-label>
+              <ion-input [(ngModel)]="newApartment.place"></ion-input>
+        </ion-item>
+        <ion-item class="m-1 mb-3">
+                <ion-label position="floating">Price <small>/month</small></ion-label>
+                <ion-input type="number" [(ngModel)]="newApartment.price"></ion-input>
+        </ion-item>
+       <ion-grid>
+         <ion-row>
+           <ion-col> 
+             <ion-item class="ml-1">
+              <ion-label position="floating">Floor</ion-label>
+              <ion-input type="number" [(ngModel)]="newApartment.floor"></ion-input>
+            </ion-item>
+          </ion-col>
+           <ion-col>
+              <ion-item class="ml-1">
+                  <ion-label position="floating">Room</ion-label>
+                  <ion-input type="number" [(ngModel)]="newApartment.room"></ion-input>
+               </ion-item>
+           </ion-col>
+           <ion-col>
+              <ion-item class="ml-1">
+                  <ion-label position="floating">Bathroom</ion-label>
+                  <ion-input type="number" [(ngModel)]="newApartment.bathroom"></ion-input>
+              </ion-item>
+           </ion-col>
+         </ion-row>
+       </ion-grid>
+       <ion-item class="ml-1 mr-1">
+              <ion-label >Furniture</ion-label>
+              <ion-checkbox slot="end" name="furniture" [(ngModel)]="newApartment.furniture"></ion-checkbox>
+       </ion-item>
+     </ion-list>
+</ion-content>

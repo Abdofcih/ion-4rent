@@ -1,0 +1,25 @@
+ion-slides{
+    height: 100vh;
+    ion-slide{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+     
+    }
+   .firstSlide{
+    background-color: #05d805;
+    color: #ffffff;
+   }
+   .secondSlide{
+    background-color: rgb(121, 11, 224);
+    color: #ffffff;
+   }
+   .thirdSlide{
+    background:url('../../assets/img/bg2.png') no-repeat center center ;
+    background-size: cover;
+    color: #ffffff;
+   }
+   
+}

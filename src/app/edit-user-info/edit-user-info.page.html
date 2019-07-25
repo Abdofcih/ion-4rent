@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/tabs/profile"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Edit Information</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="saveInfo()">
+              Save
+            </ion-button>
+          </ion-buttons>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding >
+    <ion-list>
+          <ion-item class="m-1 mb-3">
+            <ion-label position="floating">Name</ion-label>
+            <ion-input [(ngModel)]="user.name"></ion-input>
+          </ion-item>
+          <ion-item class="m-1 mb-3">
+              <ion-label position="floating">email</ion-label>
+              <ion-input [(ngModel)]="user.email"></ion-input>
+          </ion-item>
+          <ion-item class="m-1 mb-3">
+                <ion-label position="floating">phone</ion-label>
+                <ion-input [(ngModel)]="user.phone"></ion-input>
+          </ion-item>
+          <ion-item class="m-1 mb-3">
+                  <ion-label position="floating">password </ion-label>
+                  <ion-input type="number" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+          <ion-item class="m-1 mb-3">
+              <ion-label position="floating">Address </ion-label>
+              <ion-input  [(ngModel)]="user.place"></ion-input>
+           </ion-item>
+          <ion-item class="m-1 mb-3">
+              <ion-label position="floating">Facebook URL </ion-label>
+              <ion-input  [(ngModel)]="user.fbLink"></ion-input>
+         </ion-item>
+         <ion-item class="m-1 mb-3">
+            <ion-label position="floating">Twitter URL</ion-label>
+            <ion-input  [(ngModel)]="user.twLink"></ion-input>
+         </ion-item>
+       </ion-list>
+  </ion-content>

@@ -1,0 +1,25 @@
+<ion-slides pager="true" options="{pagination: true}" >
+  <ion-slide class="firstSlide" padding>
+    <i class="fas fa-building fa-4x"></i>
+    <h1> Select the area</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam distinct</p>
+    
+  </ion-slide>
+
+  <ion-slide class="secondSlide">
+      <i class="fas fa-home fa-4x"></i>
+      <h1> Compare the prices</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam distinct</p>
+  </ion-slide>
+
+  <ion-slide class="thirdSlide">
+      <i class="fas fa-home fa-4x"></i>
+      <h1> Get your needs</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, veniam distinct</p>
+      <ion-button class="ion-margin-top"(click)="onClickStart()" [routerLink]="['/','login']" shape="round" fill="outline" size="large" color="light">
+         Start
+         <ion-icon name="arrow-round-forward" slot="end"></ion-icon>
+      </ion-button>
+    
+  </ion-slide>
+</ion-slides>
