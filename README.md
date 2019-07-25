@@ -1,5 +1,5 @@
 # 4Rent Demo
-![4Rent Demo](https://imgur.com/sJqOFGq)
+![4Rent Demo](https://i.imgur.com/sJqOFGq.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) .
 
